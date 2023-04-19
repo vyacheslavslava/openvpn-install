@@ -398,7 +398,7 @@ function installQuestions() {
 		DH_TYPE="1" # ECDH
 		DH_CURVE="prime256v1"
 		HMAC_ALG="SHA256"
-		TLS_SIG="1" # tls-crypt
+		TLS_SIG="2" # tls-auth
 	else
 		echo ""
 		echo "Choose which cipher you want to use for the data channel:"
@@ -598,7 +598,7 @@ function installQuestions() {
 		echo "   1) tls-crypt (recommended)"
 		echo "   2) tls-auth"
 		until [[ $TLS_SIG =~ [1-2] ]]; do
-			read -rp "Control channel additional security mechanism [1-2]: " -e -i 2 TLS_SIG
+			read -rp "Control channel additional security mechanism [1-2]: " -e -i 1 TLS_SIG
 		done
 	fi
 	echo ""
