@@ -611,9 +611,8 @@ function installQuestions() {
 }
 
 function installOpenVPN() {
-	if [[ $AUTO_INSTALL == "y" ]]; then
 		# Set default choices so that no questions will be asked.
-		APPROVE_INSTALL="y"
+		APPROVE_INSTALL=${APPROVE_INSTALL:-y}
 		APPROVE_IP=${APPROVE_IP:-y}
 		IPV6_SUPPORT=${IPV6_SUPPORT:-n}
 		PORT_CHOICE=${PORT_CHOICE:-1}
@@ -636,7 +635,6 @@ function installOpenVPN() {
 			fi
 		fi
 		ENDPOINT=${ENDPOINT:-$PUBLIC_IP}
-	fi
 
 	# Run setup questions first, and set other variables if auto-install
 	installQuestions
