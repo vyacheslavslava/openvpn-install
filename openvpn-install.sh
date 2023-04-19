@@ -774,8 +774,6 @@ function installOpenVPN() {
 	fi
 
 	echo "dev tun
-user nobody
-group $NOGROUP
 persist-key
 persist-tun
 keepalive 10 120
