@@ -897,7 +897,7 @@ client-config-dir /etc/openvpn/ccd
 status /var/log/openvpn/status.log
 auth-user-pass-verify /etc/openvpn/auth.sh via-file
 script-security 2
-client-cert-not-required
+verify-client-cert none
 username-as-common-name
 verb 3" >>/etc/openvpn/server.conf
 
