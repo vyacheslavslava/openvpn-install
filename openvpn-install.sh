@@ -398,7 +398,7 @@ function installQuestions() {
 		DH_TYPE="1" # ECDH
 		DH_CURVE="prime256v1"
 		HMAC_ALG="SHA256"
-		TLS_SIG="2" # tls-auth
+		TLS_SIG="1" # tls-crypt
 	else
 		echo ""
 		echo "Choose which cipher you want to use for the data channel:"
